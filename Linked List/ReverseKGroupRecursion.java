@@ -69,3 +69,58 @@ public class ReverseKGroupRecursion {
         return dummy.next;
     }
  */
+
+/*
+ public int length(ListNode node){
+        ListNode temp = node;
+        int len = 0;
+        
+        while(temp!=null){
+            len++;
+            temp = temp.next;
+        }
+        return len;
+    }
+    ListNode th = null, tt = null;
+    public void addFirst(ListNode node){
+        if(th == null){
+            th = tt = node;
+        }
+        else{
+            node.next = th;
+            th = node;
+        }
+        //return th;
+    } 
+
+    public ListNode reverseKGroup(ListNode head, int k){
+        if(head == null || head.next == null) return head;
+
+        int len = length(head);
+        ListNode oh =null, ot = null;
+        ListNode curr = head;
+        while(len >= k){
+            int tempK = k;
+            while(tempK-- > 0){
+                ListNode forw = curr.next;
+                curr.next = null;
+                addFirst(curr);
+                curr = forw;
+            }
+            if(oh == null){
+                oh = th;
+                ot = tt;
+            }
+            else{
+                ot.next = th;
+                ot = tt;
+            }
+
+            th = tt = null;
+            len -= k;
+        }
+        ot.next = curr;
+        return oh;
+    }   
+    
+   */
