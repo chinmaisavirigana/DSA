@@ -1,3 +1,4 @@
+//Two pointer approach
 class Solution {
     public boolean checkValidString(String s) {
         int cmin = 0, cmax = 0; // open parentheses count in range [cmin, cmax]
